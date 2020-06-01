@@ -1,0 +1,67 @@
+# This function adds two numbers
+def add(x, y):
+    return x + y
+
+# This function subtracts two numbers
+def subtract(x, y):
+    return x - y
+
+# This function multiplies two numbers
+def multiply(x, y):
+    return x * y
+
+# This function divides two numbers
+def divide(x, y):
+    return x / y
+
+# This function gives remainder when a no is divided by other no
+def modulus(x, y):
+    return x % y
+
+# This function multiplies the 1st number by 2nd number of times i.e. x=2, y=3 -> 2*2*2, 2 is multiplied 3times
+def expo(x, y):
+    return (x ** y)
+ 
+
+print("Welcome!! This is Simple Calculator to Perform Calculations ")
+print("1.Add")
+print("2.Subtract")
+print("3.Multiply")
+print("4.Divide")
+print("5.Modulus")
+print("6.Exponentiation")
+
+loop = 'yes'
+while loop == 'yes':
+    # Take input from the user
+    choice = input("Enter choice(1/2/3/4/5/6): ")
+
+    # Check if choice is one of the six options
+    if choice in ('1', '2', '3', '4','5','6'):
+        num1 = float(input("Enter first number: "))
+        num2 = float(input("Enter second number: "))
+
+        if choice == '1':
+            print(num1, "+", num2, "=", add(num1, num2))#add
+
+        elif choice == '2':
+            print(num1, "-", num2, "=", subtract(num1, num2))#sub
+
+        elif choice == '3':
+            print(num1, "*", num2, "=", multiply(num1, num2))#mul
+
+        elif choice == '4':
+            print(num1, "/", num2, "=", divide(num1, num2))#div
+
+        elif choice == '5':
+            print(num1, "%", num2, "=", modulus(num1, num2))#mod
+
+        elif choice == '6':
+            print(num1, "**", num2, "=", expo(num1, num2))#expo
+        else:
+            print("Invalid Input") 
+    loop=input('Do you want to try again? Enter (yes/no) : ') 
+    #input to repeat or exit
+    continue
+else:
+    print('Thank you!!') # end quotation statement
