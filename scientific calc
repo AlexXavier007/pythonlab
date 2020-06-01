@@ -1,0 +1,61 @@
+import math 
+
+print("Welcome!! This is Scientific Calculator to Perform Calculations ")
+print("1.Sin")
+print("2.Cos")
+print("3.Tan")
+print("4.Square Root")
+print("5.Min & Max of a number")
+print("6.Pi")
+print("7.log")
+
+loop = 'yes'
+while loop == 'yes':
+    # Take input from the user
+    choice = input("Enter choice(1/2/3/4/5/6/7): ")
+
+    # Check if choice is one of the six options
+    if choice in ('1', '2', '3', '4','5','6','7'):
+        
+        if choice == '1':
+            num1 = float(input("Enter number to find the sin value of it: "))
+            print("The sin of the ", num1, " is ", math.sin(num1))
+
+        elif choice == '2':
+            num1 = float(input("Enter number to find the cos value of it: "))
+            print("The cos of the ", num1, " is ", math.cos(num1))
+
+        elif choice == '3':
+            num1 = float(input("Enter number to find the tan value of it: "))
+            print("The tan of the ", num1, " is ", math.tan(num1))
+
+        elif choice == '4':
+            num1 = float(input("Enter number to find the square root value of it: "))
+            print("The square root of the ", num1, " is ", math.sqrt(num1))
+
+        elif choice == '5':
+            len = input("Enter the total number to be entered\n") 
+            l = 0 # initializing the starting as 0 to l
+            r = int(len)-1 #storing the end position to r
+            ar=[]
+            print("Enter the numbers to find max and min of the entered values") # input the minutes
+            for i in range(0,int(len)):
+              ele = int(input())
+              ar.append(ele) 
+            print(ar)
+            print("The max of the", ar, "is", max(ar))
+            print("The min of the", ar, "is", min(ar))
+
+        elif choice == '6':
+            print("The Pi Value is ", math.pi)
+
+        elif choice == '7':
+            num1 = int(input("Enter number to find the base 10 log value of it: "))
+            print("The log of the ", num1, " is ", math.log(num1,10))
+        else:
+            print("Invalid Input") 
+    loop=input('Do you want to try again? Enter (yes/no) : ') 
+    #input to repeat or exit
+    continue
+else:
+    print('Thank you!!') # end quotation statement
